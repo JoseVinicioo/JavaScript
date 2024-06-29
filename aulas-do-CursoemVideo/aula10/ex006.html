@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #a{
+            margin: auto;
+            font: normal 1.5em arial;
+            background-color: black;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.querySelector('#a')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', laele)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar(){
+            a.innerText = 'clicou👌'
+            a.style.background = 'white'
+            a.style.color = 'black'
+            a.style.border = '1px solid black'
+        }
+        function laele(){
+            a.innerText = 'Entrou!(la ele)'
+            a.style.cursor = 'pointer'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.color = 'white'
+            a.style.background = 'black'
+        }
+    </script>
+</body>
+</html>

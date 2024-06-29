@@ -1,0 +1,67 @@
+:root{
+    --principal: #263238;
+    --secundaria: #BA68C8;
+}
+body{
+    background-color: var(--principal);
+    height: 100vh;
+    display: flex;
+    margin: auto;
+}
+section{
+    border: 1px solid white;
+    width: 40%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    font: normal 19px "Arial", sans-serif;
+    margin-right: 100px;
+}
+.container {
+    display: flex;
+    width: 60%; /* Define a largura do container */
+    margin: auto; /* Centraliza o container na página */
+}
+h1{
+    color: var(--secundaria);
+}
+.boxnumber{
+    border: 2px solid var(--secundaria);
+    border-radius: 5px;
+    padding: 5px;
+}
+#box > p{
+    margin: 7px;
+}
+#btn{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid var(--secundaria);
+    font: 500 5px var(--secundaria);
+    color: var(--secundaria);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: var(--secundaria);
+    color: white;
+    border-radius: 0;
+}
+#seltab{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.imagem-direita {
+    float: right;
+    margin-left: 20px;
+    width: 40%;
+}

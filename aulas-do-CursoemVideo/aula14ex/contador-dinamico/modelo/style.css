@@ -1,0 +1,65 @@
+:root{
+    --principal: #22233B;
+    --secundaria: #FFA345;
+}
+body{
+    background-color: var(--principal);
+    height: 100vh;
+    display: flex;
+    margin: auto;
+}
+section{
+    border: 1px solid white;
+    width: 90%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    font: normal 19px "Arial", sans-serif;
+    margin-right: 70px;
+}
+.container {
+    display: flex;
+    width: 90%; /* Define a largura do container */
+    margin: auto; /* Centraliza o container na página */
+}
+h1{
+    color: var(--secundaria);
+}
+.boxnumber{
+    border: 2px solid var(--secundaria);
+    border-radius: 5px;
+    padding: 5px;
+}
+#box > p{
+    margin: 7px;
+}
+#btn{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 90px;
+    height: 40px;
+    font-weight: bold;
+    border: 1px solid var(--secundaria);
+    font: 600 19px var(--secundaria);
+    color: var(--secundaria);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: var(--secundaria);
+    color: white;
+    border-radius: 0;
+}
+#resu{
+    padding: 25px 60px ;
+}
+.imagem-direita {
+    float: right;
+    margin-left: 10px;
+    width: 90%;
+}

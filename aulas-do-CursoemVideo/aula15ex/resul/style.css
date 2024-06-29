@@ -1,0 +1,94 @@
+:root{
+    --principal: #172128;
+    --secundaria: #07A232;
+}
+body{
+    background-color: var(--principal);
+    height: 100vh;
+    display: flex;
+    margin: auto;
+}
+section{
+    border: 1px solid white;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    font: normal 16px "Arial", sans-serif;
+}
+.container {
+    display: flex;
+    width: 60%; /* Define a largura do container */
+    margin: auto; /* Centraliza o container na página */
+}
+h1{
+    color: var(--secundaria);
+    margin-bottom: 0;
+}
+#numberentr{
+    border: 2px solid var(--secundaria);
+    width: 180px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+}
+#box{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
+#btn{
+    border-radius: 8px;
+    margin-left: 5px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: 1px solid var(--secundaria);
+    color: var(--secundaria);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: var(--secundaria);
+    color: white;
+    border-radius: 0;
+}
+#resu{
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#valuesadd{
+    width: 160px;
+    margin-bottom: 10px;
+}
+#btnfinal{
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: 1px solid var(--secundaria);
+    background-color: var(--secundaria);
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#btnfinal:hover{
+    background-color: white;
+    color: var(--secundaria);
+    border-radius: 0;
+}
+.imagem-direita {
+    float: right;
+    margin-left: 10px;
+    width: 550px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testador de idade</title>
+    <style>
+        body{
+            background-color: rgb(60, 60, 248);
+            color: aliceblue;
+            font: 600 16px arial;
+            text-align: center;
+        }
+        main{
+            text-align: left;
+            margin: auto;
+            width: 400px;
+            display: fl;
+            background-color: aliceblue;
+            color: black;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        #sectionsexo{
+            padding: 10px 0px;
+        }
+        #resu{
+            margin-top: 20px;
+            text-align: justify;
+        }
+        img{
+            padding-left: 100px;
+            margin-top: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <main>
+        Ano de Nascimento: 
+        <input type="number" name="anonasc" id="anonasc">
+        <div id="sectionsexo">
+            Sexo:
+            <input type="radio" name="sexo" id="mas" checked>
+            <label for="mas">Masculino</label>
+            
+            <input type="radio" name="sexo" id="fem">
+            <label for="fem">Feminino</label>
+        </div>
+        <input type="button" value="Verificar" onclick="testador()">
+        <div id="resu">
+            Preencha os dados acima para ver o resultado
+        </div>
+        <img src="" alt="">
+    </main>
+
+    <script>
+        function testador(){
+        var res = document.querySelector('#resu')
+        var anoatual = new Date().getFullYear()
+        var anonasc = Number(document.querySelector('#anonasc').value)
+        if (anonasc == 0 || anonasc > anoatual){
+            alert('[ERRO] Verifique os dados e tente novamente!!')
+        } else {
+            var sexo = document.getElementsByName('sexo')
+            var idade = anoatual - anonasc
+            var genero = ''
+            var img = document.querySelector('img')
+            if (sexo[0].checked){
+                genero = 'Homem'
+                if (idade >- 0 && idade < 10){
+                    img.src = 'src/img/homem-crianca.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else if ( idade < 21){
+                    img.src = 'src/img/homem-jovem.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else if (idade < 50){
+                    img.src = 'src/img/homem-adulto.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else {
+                    img.src = 'src/img/homem-idoso.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                }
+            } else {
+                genero = 'Mulher'
+                if (idade >- 0 && idade < 10){
+                    img.src = 'src/img/mulher-crianca.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else if ( idade < 21){
+                    img.src = 'src/img/mulher-jovem.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else if (idade < 50){
+                    img.src = 'src/img/mulher-adulta.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                } else {
+                    img.src = 'src/img/mulher-idosa.png'
+                    img.style.width = '200px'
+                    img.style.height = '200px'
+                }
+            }
+            res.style.textAlign = 'center'
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        }
+        }
+    </script>
+</body>
+</html>
